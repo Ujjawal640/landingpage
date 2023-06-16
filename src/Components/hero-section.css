@@ -1,0 +1,197 @@
+.container
+{
+  
+}
+
+p{
+  font-style: bold;
+  font-size: 20px;
+}
+
+.left-div, .right-div
+{
+  /* flex: 1 1 100%; */
+}
+
+.hero__img
+  {
+    width: 400px;
+    height: 350px;  
+  
+  }
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+form {
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+  flex-direction: column;
+  justify-content: center;
+ 
+  color: black;
+  /* max-width: 400px; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  /* box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); */
+  padding: 50px;
+  background-color: rgb(252, 252, 252);
+}
+
+.title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero__title
+{
+    color: #000000;
+    font-family: "Manrope", Sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+.few_seat
+{
+  color: #FB0202;
+    font-family: "Manrope", Sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: -15px;
+}
+
+form div input {
+  width: 100%;
+  height: 30x;
+  border-radius: 8px;
+  outline: none;
+  border: 2px solid #c4c4c4;
+  padding: 0 30px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.radiobtn
+{
+  width: 10px;
+  height: 10px;
+}
+
+button, input, optgroup, select, textarea, p {
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+.exper p{
+  margin-left: 5px;
+}
+
+.ex{
+  margin-top: -5%;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form div {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+input:focus {
+  border: 2px solid #f2796e;
+}
+
+
+
+.action-btn
+{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  background-image: linear-gradient(to right, #edc950 0%, #f85528 51%, #e9c551 100%);
+  padding: 0.5rem 0.8rem;
+  border: none;
+  text-align: center;
+  outline: none;
+  border-radius: 10px;
+  height: 40px;
+  font-weight: bold;
+  background-size: 200% auto;
+  transition: scale 0.2 ease;
+  box-shadow: 0 0 20px #5c2e82;
+  cursor: pointer;
+}
+
+.action-btn:hover {
+  background-position: right center;
+  scale: 1.05
+}
+
+
+
+@media (min-width: 980px) {
+  
+  .hero__img
+  {
+    width: 300px;
+    height: 350px;  
+  }
+  .job
+  {
+    font-size: large;
+  }
+}
+
+@media (min-width: 830px) {
+  .hero__img
+  {
+    width: 300px;
+    height: 350px;    
+  }
+  .job
+  {
+    font-size: large;
+  }
+}
+
+@media (max-width: 850px) {
+  .left-div, .right-div {
+    flex-basis: 50%;
+  }
+  .hero__img
+  {
+    width: 350px;
+    height: 450px;  
+    align-items: center;  
+    margin-left: 25%;
+  }
+  .job
+  {
+    font-size: large;
+    text-align: center;
+  }
+
+}
+@media (min-width: 100px) {
+  
+  .cardl
+  {
+    width: 300px;
+     
+  }
+ 
+  .hero__img
+  {
+    width: 200px;
+    height: 200px;  
+   
+  }
+ 
+}

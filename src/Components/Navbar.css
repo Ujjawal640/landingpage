@@ -1,0 +1,99 @@
+.blue{
+    background-color:#09243f;
+}
+.lblue{
+    background-color: #11406e;
+}
+.yellow{
+    background-color: #e4903c;
+}
+.input{
+    width: 470px;
+    background-color: #e4903c;
+    border-color: black;
+    margin:3px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+.head{
+    margin-left: 240px;
+    
+}
+.cardl{
+    display: flex;
+    justify-self: end;
+    margin-left: 50px auto;
+    padding-right: 0%;
+}
+
+
+.InstructorContainer{
+  padding: 40px;
+  color: white;
+}
+
+.InstructorTitle{
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.InstructorInfo{
+  font-size: 18px;
+  margin-bottom: 30px;
+} 
+
+
+.InstructorImage{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+.accordion-item{
+    margin-bottom: 5px;;
+}
+.cards{
+    padding-bottom: 5px;
+}
+.accordion-button:not(.collapsed) {
+    background-color: white;
+    border-color: white;
+}
+.accordion-header:not(.collapsed){
+    border-color: white;
+}
+.ytext{
+    color:#e4903c;
+    width: 100%;
+    justify-content: center;
+}
+.inpu{
+    background-color: #e4903c;
+    color: white;
+}
+.im{
+    height: 100px;
+    width: 100px;
+  
+}
+.btn{
+    justify-content: center;
+}
+@media (min-width: 1200px) {
+    .btn {
+        width: 210px;
+    }
+}
+
+.card{
+   margin: auto;
+}
+
+.bt:hover, .bt:focus, .bt:active, .bt.active, .open>.dropdown-toggle.bt {
+    color: #fff;
+    background-color: red;
+     /*set the color you want here*/
+}

@@ -1,0 +1,22 @@
+.lblue{
+  background-color: #11406e;
+}
+
+.follows span a {
+  text-decoration: none;
+}
+
+.follows span {
+  margin-right: 15px;
+}
+
+.link__list .link__item {
+  background: transparent;
+
+}
+
+.link__list a {
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+}
