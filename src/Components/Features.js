@@ -20,7 +20,7 @@ const Features = () => {
         </div>
 <div className="p-4">
 <div class="container text-center">
-  <div class="row row-cols-3">
+  <div class="row row-col-3">
 
     <div class="col    col-md-4 col-sm-4 col-lg-4">
       <div class=" bg-light">
@@ -59,7 +59,7 @@ const Features = () => {
       <div class=" bg-light">
       <div class="card  my-2">
   <div class="card-body">
-    <h5 class="card-title">Recording Of Each Session</h5>
+    <h5 class="card-title ">Recording Of Each Session</h5>
   </div>
   <img src={recording} class="im mx-auto p-2" alt=""/>
 </div>

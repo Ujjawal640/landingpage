@@ -21,15 +21,15 @@ const Price = () => {
         <div className="text-center text-black fs-3 py-3">
           <h2>Technologies Covered</h2>
         </div>
-<div className="container ">  
-<div class="card border-light " style={{'width': '35rem'}}>
-  <div class="card-body ">
-    <div className="row row-cols-5">
+<div className="container  ">  
+<div class=" border-light center">
+  <div class="card-body mx-auto">
+    <div className=" row row-cols-2 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 row-cols-xl-5 g-0">
 
 
-<div class="col    col-md-4 col-sm-4 col-lg-4">
+<div class="col    ">
 <div class=" bg-light">
-<div class="card  my-2">
+<div class="card  m-1">
 <div class="card-body">
 <h5 class="card-title text-center">HTML</h5>
 </div>
@@ -38,9 +38,9 @@ const Price = () => {
 </div>
 </div>
 
-<div class="col    col-md-4 col-sm-4 col-lg-4">
+<div class="col    ">
 <div class=" bg-light">
-<div class="card  my-2">
+<div class="card  m-1">
 <div class="card-body">
 <h5 class="card-title text-center">CSS</h5>
 </div>
@@ -49,9 +49,9 @@ const Price = () => {
 </div>
 </div>
 
-<div class="col    col-md-4 col-sm-4 col-lg-4">
+<div class="col    ">
 <div class=" bg-light">
-<div class="card  my-2">
+<div class="card  m-1">
 <div class="card-body">
 <h5 class="card-title text-center">Javascript</h5>
 </div>
@@ -60,9 +60,9 @@ const Price = () => {
 </div>
 </div>
 
-<div class="col    col-md-4 col-sm-4 col-lg-4">
+<div class="col    ">
 <div class=" bg-light">
-<div class="card  my-2">
+<div class="card m-1 ">
 <div class="card-body">
 <h5 class="card-title text-center">Bootstrap</h5>
 </div>
@@ -71,9 +71,9 @@ const Price = () => {
 </div>
 </div>
 
-<div class="col    col-md-4 col-sm-4 col-lg-4">
+<div class="col    ">
 <div class=" bg-light">
-<div class="card  my-2">
+<div class="card  m-1">
 <div class="card-body">
 <h5 class="card-title text-center">React</h5>
 </div>
@@ -82,9 +82,9 @@ const Price = () => {
 </div>
 </div>
 
-<div class="col    col-md-4 col-sm-4 col-lg-4">
+<div class="col    ">
 <div class=" bg-light">
-<div class="card  my-2">
+<div class="card  m-1">
 <div class="card-body">
 <h5 class="card-title text-center">Nodejs</h5>
 </div>
@@ -93,9 +93,9 @@ const Price = () => {
 </div>
 </div>
 
-<div class="col    col-md-4 col-sm-4 col-lg-4">
+<div class="col    ">
 <div class=" bg-light">
-<div class="card  my-2">
+<div class="card  m-1">
 <div class="card-body">
 <h5 class="card-title text-center">Angular</h5>
 </div>
@@ -104,9 +104,9 @@ const Price = () => {
 </div>
 </div>
 
-<div class="col    col-md-4 col-sm-4 col-lg-4">
+<div class="col    ">
 <div class=" bg-light">
-<div class="card  my-2">
+<div class="card m-1 ">
 <div class="card-body">
 <h5 class="card-title text-center">Python</h5>
 </div>
@@ -115,9 +115,9 @@ const Price = () => {
 </div>
 </div>
 
-<div class="col    col-md-4 col-sm-4 col-lg-4">
+<div class="col    ">
 <div class=" bg-light">
-<div class="card  my-2">
+<div class="card  m-1">
 <div class="card-body">
 <h5 class="card-title text-center">django</h5>
 </div>
@@ -126,9 +126,9 @@ const Price = () => {
 </div>
 </div>
 
-<div class="col    col-md-4 col-sm-4 col-lg-4">
+<div class="col    ">
 <div class=" bg-light">
-<div class="card  my-2">
+<div class="card  m-1">
 <div class="card-body">
 <h5 class="card-title text-center">Devops</h5>
 </div>
@@ -137,9 +137,9 @@ const Price = () => {
 </div>
 </div>
 
-<div class="col    col-md-4 col-sm-4 col-lg-4">
+<div class="col    ">
 <div class=" bg-light">
-<div class="card  my-2">
+<div class="card  m-1">
 <div class="card-body">
 <h5 class="card-title text-center">AWS</h5>
 </div>
@@ -148,29 +148,22 @@ const Price = () => {
 </div>
 </div>
 
-<div class="col    col-md-4 col-sm-4 col-lg-4">
+<div class="col    ">
 <div class=" bg-light">
-<div class="card  my-2">
+<div class="card   m-1">
 <div class="card-body">
 <h5 class="card-title text-center">Git</h5>
 </div>
-<img src={git} class=" im mx-auto p-2" alt=""/>
+<img src={git} class="p-2 im mx-auto p-2" alt=""/>
 </div>
 </div>
 </div>
 
-<div class="col    col-md-4 col-sm-4 col-lg-4">
-<div class=" bg-light">
-<div class="card border-light my-2">
-<div class="card-body">
-</div>
-</div>
-</div>
-</div>
 
-<div class="col    col-md-4 col-sm-4 col-lg-4">
+
+<div class="col   ">
 <div class=" bg-light">
-<div class="card  my-2">
+<div class="card  m-1">
 <div class="card-body">
 <h5 class="card-title text-center">SQL</h5>
 </div>
@@ -180,14 +173,7 @@ const Price = () => {
 </div>
 
 
-<div class="col    col-md-4 col-sm-4 col-lg-4">
-<div class=" bg-light">
-<div class="card border-light my-2">
-<div class="card-body">
-</div>
-</div>
-</div>
-</div>
+
 
        
       

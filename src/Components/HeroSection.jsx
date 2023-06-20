@@ -1,29 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import heroImg from "../assets/heropage.png";
 import "./hero-section.css";
 
 const HeroSection = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    number: '',
+    experience: '', // Radio button value
+  });
+
+  const handleChange = (event) => {
+    const { name, value, type, checked } = event.target;
+    const updatedValue = type === 'radio' ? (checked ? value : '') : value;
+
+    setFormData({
+      ...formData,
+      [name]: updatedValue,
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    fetch('/.netlify/functions/sendEmail/send', {
+      method: 'POST',
+      body: JSON.stringify(formData),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((response) => response.text())
+      .then((data) => {
+        alert(data);
+        setFormData({
+          name: '',
+          email: '',
+          number: '',
+          experience: '',
+        });
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+      });
+  };
+
+
+
+
+
   return (
   
           
-          <div className="row m-5" id="herosec">
-            <div  className="col mx-auto my-auto">
-              <div className="imgcenter text-center">
-              <img src={heroImg} className="hero__img" height="350px" width="400px"/>
-              <div style={{"marginTop":"50px"}}>
-                  <h3 className="job">With 100% JOB Gurantee</h3>
-              </div>
-              </div>
-                <br/>
-                <div>
-                </div>                
+          <div className="row g-0 row-cols-2" id="herosec">
+            <div className="col">
+              <img src={heroImg} alt=""  className="hero__img img-responsive"/>
             </div>
-            <div className=" col-6 col-xs-4">  
-            <div className="center p-5" >  
-            <div className="card">         
+            
+            <div className=" col">  
+            <div className="center  " >  
+          
+            <div className="border-black border-3">         
               <div className="form-div ">
-                <form className="elementor-form" id="form">
+                <form className="elementor-form" id="form" onSubmit={handleSubmit}>
                   <div>                  
                     <div className="hero__content">
                         <h2 className="mb-4 hero__title">Book a <span style={{"color":"orange"}}>FREE</span> Demo Now</h2>
@@ -38,6 +79,8 @@ const HeroSection = () => {
                     name="name"
                     id="name"
                     placeholder="Enter your Name"
+                    value={formData.name}
+                    onChange={handleChange}
                   />                  
                 </div>
                 <div>
@@ -47,50 +90,65 @@ const HeroSection = () => {
                     name="email"
                     id="email"
                     placeholder="Enter your Email ID"
+                    value={formData.email}
+                    onChange={handleChange}
                   />
                 </div>
                 <div>
                   <label for="number">Contact Number<span style={{"color":"red"}}><b>*</b></span></label>                  
                   <input
-                    type="text"
-                    name="username"
-                    id="username"
+                    
+                    name="number"
+                    id="number"
                     placeholder="Enter your Mobile Number"
+                    value={formData.number}
+                    onChange={handleChange}
                   />
                 </div >
                 <div className="exper">
                   <label for="email">Experience<span style={{"color":"red"}}><b>*</b></span></label>   <br/>
-                  <div className="d-flex p-4">
-                  <input className="radiobtn"
-                    type="radio"
-                    name="exp" size="2px"/>
-                    <p style={{"marginTop":"-3%"}}>Working Professional - Technical Roles</p>
-                  </div>               
-                  
 
-                  <div className="d-flex ex p-4">
-                  <input className="radiobtn"
-                    type="radio"
-                    name="exp" size="2px"/>
-                    <p style={{"marginTop":"-3%"}}>Working Professional - Non Technical</p>
-                  </div>  
+                  <div class="form-check p-2">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"  value="Working Professional - Technical Roles"
+                    checked={formData.experience === 'Working Professional - Technical Roles'}
+                    onChange={handleChange}  />
+  <label class="form-check-label" for="flexRadioDefault1">
+  Working Professional - Technical Roles
+  </label>
+</div>
 
-                  <div className="d-flex ex p-4">
-                  <input className="radiobtn"
-                    type="radio"
-                    name="exp" />
-                    <p style={{"marginTop":"-3%"}}>College Student - Final Year</p>
-                  </div>  
+<div class="form-check p-2">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"   value="Working Professional - Non Technical"
+                   checked={formData.experience === 'Working Professional - Non Technical'}
+                  onChange={handleChange}  />
+  <label class="form-check-label" for="flexRadioDefault1">
+  Working Professional - Non Technical
+  </label>
+</div>
 
-                  <div className="d-flex ex p-4">
-                  <input className="radiobtn"
-                    type="radio"
-                    name="exp" size="2px"/>
-                    <p style={{"marginTop":"-3%"}}>Others</p>
-                  </div>  
+<div class="form-check p-2">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="College Student - Final Year"
+          checked={formData.experience === 'College Student - Final Year'}
+          onChange={handleChange} />
+  <label class="form-check-label" for="flexRadioDefault1">
+  College Student - Final Year
+  </label>
+</div>
+
+<div class="form-check p-2">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"  value="Others"
+          checked={formData.experience === 'Others'}
+          onChange={handleChange}  />
+  <label class="form-check-label" for="flexRadioDefault1">
+  Others  </label>
+</div>
+
+
+                 
                 </div>
 
-                <a href="#"  className="action-btn">Book Now</a>               
+                
+                <button className="action-btn" type="submit">Book Now</button>            
               </form>
             </div>
             </div>
