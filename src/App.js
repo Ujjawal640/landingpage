@@ -9,8 +9,11 @@ import Price from './Components/Price';
 import HeroSection from './Components/HeroSection'
 import Footer from './Components/Footer'
 import Courses from './Components/Courses'
-import Price2 from './Components/Price2';
+import ResgiterSteps from './Components/ResgiterSteps';
+
+
 function App() {
+
   return (
     <div className="App">
       <Headerr/>
@@ -19,8 +22,7 @@ function App() {
     
       <Features/>
       <Callback/>
-      <Price/>
-      <Price2/>
+      <ResgiterSteps/>
       <Courses/>
       <Footer/>
     </div>

@@ -1,4 +1,10 @@
 import React, { useState } from 'react';
+import './Navbar.css';
+
+
+
+
+
 
 
 const Callback = () => {
@@ -20,7 +26,7 @@ const Callback = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    fetch('/.netlify/functions/sendEmail/send2', {
+    fetch(`https://landingpagebackend-pdqf.onrender.com/send2`, {
       method: 'POST',
       body: JSON.stringify(form),
       headers: {
@@ -40,6 +46,13 @@ const Callback = () => {
         console.error('Error:', error);
         alert('An error occurred. Please try again.');
       });
+
+      
+      setForm({
+        name: "",
+        email: "",
+        number: "",
+      });
   };
 
   return (
@@ -48,11 +61,9 @@ const Callback = () => {
         <div className="container newsletter">
           <div className="px-3">
             <div className="row">
-              <div className="col py-4 text-light">
-                <h2>Request Callback</h2>
-                <div className="py-2 m-0">
-                  <p>Only for working professionals or Final year Students</p>
-                </div>
+              <div className="col py-4 text-light ">
+                <h2 className='callback'>Request Callback</h2>
+               
               </div>
 
               <div className="col ms-auto">
@@ -60,7 +71,7 @@ const Callback = () => {
                   <div className="col-md input-group p-3 flex-nowrap">
                     <input
                       type="text"
-                      className="form-control"
+                      className="form-control yellow"
                       placeholder="Name"
                       aria-label="Username"
                       aria-describedby="addon-wrapping"
@@ -73,7 +84,7 @@ const Callback = () => {
                   <div className="col-md input-group p-3 flex-nowrap">
                     <input
                       type="text"
-                      className="form-control"
+                      className="form-control yellow"
                       placeholder="Email"
                       aria-label="Username"
                       aria-describedby="addon-wrapping"
@@ -88,7 +99,7 @@ const Callback = () => {
                   <div className="col input-group p-3 flex-nowrap">
                     <input
                       type="text"
-                      className="form-control"
+                      className="form-control yellow"
                       placeholder="Phone Number"
                       aria-label="Username"
                       aria-describedby="addon-wrapping"
